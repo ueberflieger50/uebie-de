@@ -1,0 +1,15 @@
+/* TODO Implement The Darkmode Into the page */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* background colors */
+        --main-backgorund-color: #f2f2f2;
+        --header-background-color: #252526;
+        /* text colors */
+        --text-color: #1a1a1a;
+        --h1-text-color: #fff;
+        --h2-text-color: #dadada;
+        /* other colors */
+        --footer: #1e3455;
+        --accent: #006492;
+    }
+}
