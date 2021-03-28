@@ -1,3 +1,3 @@
 function privacyInfo(){
-    alert("Diese website nutzt ein selbst gehostetes Umami. Jedoch werden keine Personenbezogenen Daten ausgewertet oder anderweitig verwendet.")
+    alert("Diese Website nutzt ein selbst gehostetes Umami. Jedoch werden keine personenbezogenen Daten ausgewertet oder anderweitig verwendet.")
 } 
