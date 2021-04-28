@@ -2,7 +2,9 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
+
 @media (prefers-color-scheme: dark) {
     :root {
         /* background colors */
@@ -10,21 +12,83 @@
         --header-background-color: #252526;
         /* text colors */
         --text-color: #e6e6e6;
+        --hover-text-color: #f3f3f3;
         --header-color: #3d94eb;
         --link-color: #1897ff;
-        --footer-color: #999999 ;
+        --footer-color: #999999;
     }
 }
+
 @media (prefers-color-scheme: light) {
     :root {
         /* background colors */
         --main-backgorund-color: #f2f2f2;
         /* text colors */
         --text-color: #1a1a1a;
+        --hover-text-color: #272727;
         --header-color: #34495e;
         --link-color: #0057E9;
-        --footer-color: #999999 ;
+        --footer-color: #999999;
     }
+}
+
+.modal {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 9;
+    width: 50%;
+    color: var(--text-color);
+}
+
+.modal-background {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    right: 0;
+    background-color: hsla(0, 0%, 8%, 0.384);
+    z-index: 8;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    z-index: 10;
+    background-color: #425B76;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.modalheadertext {
+    cursor: move;
+}
+
+.modal-close {
+    cursor: pointer;
+    display: inline;
+    float: right;
+    font-size: 1.5rem;
+}
+
+.modal-content {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: var(--main-backgorund-color);
+    padding: 5px;
+}
+
+#privacyInfo:hover {
+    cursor: pointer;
+    color: var(--hover-text-color);
+    transition: 0.3s;
 }
 
 /*
@@ -36,10 +100,12 @@ body {
     color: #7f8c8d;
     font-size: 13px;
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
     color: var(--link-color);
 }
@@ -69,7 +135,7 @@ label {
 
 .l-box-lrg {
     padding: 2em;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .is-center {
@@ -123,11 +189,13 @@ a.pure-button-primary {
 .home-menu {
     padding: 0.5em;
     text-align: center;
-    box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.10);
 }
+
 .home-menu {
     background: #2d3e50;
 }
+
 .pure-menu.pure-menu-fixed {
     /* Fixed menus normally have a border at the bottom. */
     border-bottom: none;
@@ -148,6 +216,7 @@ a.pure-button-primary {
 .home-menu a {
     color: #6FBEF3;
 }
+
 .home-menu li a:hover,
 .home-menu li a:focus {
     background: none;
@@ -160,13 +229,14 @@ a.pure-button-primary {
  * -- SPLASH STYLES --
  * This is the blue top section that appears on the page.
  */
-.splash-background{
+.splash-background {
     background-image: url("../assets/code.jpg");
     filter: blur(5px);
     -webkit-filter: blur(5px);
-    height: 100%; 
+    height: 100%;
 
 }
+
 .splash-container {
     z-index: 1;
     overflow: hidden;
@@ -184,7 +254,10 @@ a.pure-button-primary {
     height: 50%;
     margin: auto;
     position: absolute;
-    top: 100px; left: 0; bottom: 0; right: 0;
+    top: 100px;
+    left: 0;
+    bottom: 0;
+    right: 0;
     text-align: center;
     text-transform: uppercase;
 }
@@ -221,7 +294,7 @@ a.pure-button-primary {
     z-index: 2;
     background: var(--main-backgorund-color);
     color: var(--text-color);
-}    
+}
 
 /* We want to give the content area some more padding */
 .content {
@@ -245,9 +318,10 @@ a.pure-button-primary {
 .content-subhead {
     color: #1f8dd6;
 }
-    .content-subhead i {
-        margin-right: 7px;
-    }
+
+.content-subhead i {
+    margin-right: 7px;
+}
 
 /* This is the class used for the dark-background areas. */
 .ribbon {
@@ -281,12 +355,13 @@ a.pure-button-primary {
     .home-menu {
         text-align: left;
     }
-        .home-menu .right {
-            float: right;
-        }
+
+    .home-menu .right {
+        float: right;
+    }
 
     /* We increase the height of the splash-container */
-/*    .splash-container {
+    /*    .splash-container {
         height: 500px;
     }*/
 
@@ -315,6 +390,7 @@ a.pure-button-primary {
  * of the mobile and tablet styles.
  */
 @media (min-width: 78em) {
+
     /* We increase the header font size even more */
     .splash-head {
         font-size: 300%;

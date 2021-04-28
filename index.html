@@ -10,11 +10,12 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
     <link rel="shortcut icon" href="assets/favicon.svg" type="image/x-icon">
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
     <!-- <script async defer data-website-id="7d5426b8-2478-4039-bad8-f6339a88ad19" src="http://uebie.de/umami/umami.js"> -->
     </script>
     <title>uebie.de</title>
 </head>
+
 
 <body>
     <div class="header">
@@ -34,6 +35,16 @@
                 <li class="pure-menu-item "><a href="/login"
                         class="pure-menu-link umami--click--navbar-login-button">Login</a></li>
             </ul>
+        </div>
+    </div>
+    <div class="modal-background" id="modalbackground"></div>
+    <div class="modal" id="modal">
+        <div class="modal-header" id="modalheader">
+            <div class="modalheadertext" id="modalheadertext"></div>
+            <div class="modal-close">&times;</div>
+        </div>
+        <div class="modal-content" id="modalcontent">
+
         </div>
     </div>
     <div class="splash-container">
@@ -85,7 +96,8 @@
                 </div>
                 <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
                     <h3 class="content-subhead"><i class="fa fa-html5"></i>Diese Website</h3>
-                    <p>Dies ist meine erste Homepage, welche ich komplett selbst baue*, der Code mit allen weiteren Infos
+                    <p>Dies ist meine erste Homepage, welche ich komplett selbst baue*, der Code mit allen weiteren
+                        Infos
                         ist auch auf meinem <a href="https://github.com/ueberflieger50" target="_blank"
                             class="umami--click--ueberflieger-GitHub-link">GitHub</a>.</p>
                     <a href="https://github.com/ueberflieger50/uebie-de" target="_blank"
@@ -123,7 +135,9 @@
         <div class="content">
             <h2 class="content-head is-center" style="margin-bottom: 3em;">Mehr kommt bald</h2>
         </div>
-        <div class="footer is-center l-box">Made by Ueberflieger | <a onclick="privacyInfo()" style="display: inline;">Datenschutz</a></div>
+        <div class="footer is-center l-box">Made by Ueberflieger | <p style="display: inline;" id="privacyInfo">
+                Datenschutz</p>
+        </div>
     </div>
 </body>
 
